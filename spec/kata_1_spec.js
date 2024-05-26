@@ -23,5 +23,12 @@ describe('Self Study 2 – TDD Pair Programming Coding Kata “Electrons around 
         const result = game.play(input);
         expect(result).toBe(expectedOutput);
     });
+
+    it('should return 12 for the input [3, 5, 3, 5, 4, 2]', function() {
+        const input = [3, 5, 3, 5, 4, 2];
+        const expectedOutput = 12;
+        const result = game.play(input);
+        expect(result).toBe(expectedOutput);
+    });
 });
 
