@@ -1,5 +1,5 @@
-function Example() {}
+function Game() {}
 
-Example.prototype.run = function() {
-
+Game.prototype.play = function() {
+    
 };
