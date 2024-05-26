@@ -1,15 +1,12 @@
-function Game() {}
+class Game {
+    constructor() {
+        this.PETALS_MAP = {
+            3: 2,
+            5: 4
+        };
+    }
 
-Game.prototype.play = function(dice) {
-    let totalPetals = 0;
-        
-    dice.forEach(die => {
-        if (die === 3) {
-            totalPetals += 2;
-        } else if (die === 5) {
-            totalPetals += 4;
-        }
-    });
-
-    return totalPetals;
-};
+    play(dice) {
+        return dice.reduce((totalPetals, die) => totalPetals + (this.PETALS_MAP[die] || 0), 0);
+    }
+}
